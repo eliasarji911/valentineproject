@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's day project</title>
+<style>
+ body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+     background-color: pink;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     }
+h1 {
+     color: rgb(255, 0, 0);
+     font-size: 20px;
+     }
+.buttons {
+     margin-top: 20px;
+    }
+button {
+     font-size: 15px;
+     padding: 10px 20px;
+     margin: 10px;
+     cursor: pointer;
+     border-radius: 5px;
+    }
+.yes {
+     background-color: rgb(204, 255, 0);
+    }
+.no {
+     background-color: lightcoral;
+     position: absolute;
+    }
+h5{
+     color: white;
+     font-size: medium;
+}
+a{
+     color: blueviolet;
+     font-size: 50px;
+}
+</style>
+</head>
+<body>
+    <h1>would you be my Valentine? 🌹😉🌹</h1>
+    <div class="buttons">
+    <button class="yes" onclick="show()">Yes</button>
+    <button class="no" onmouseover="move()">No</button>
+    </div>
+    <p id="message" style="font-size: 20px; color: red; font-weight: bold;"></p>
+<script>
+ function show(){
+ document.getElementById('message').innerText = "I knew it ;) ❤️";
+    }
+        
+    function move(){
+        let noButton = document.querySelector('.no');
+        let x = Math.random()*(window.innerWidth-100);
+        let y = Math.random()*(window.innerHeight-100);
+        noButton.style.left = x+'px';
+        noButton.style.top = y+'px';
+    }
+</script>
+<h3>developed by Elia especially for <a>Her</a></h3>
+</body>
+</html>
